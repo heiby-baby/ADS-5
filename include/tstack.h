@@ -1,5 +1,5 @@
 // Copyright 2021 NNTU-CS
-#include <string> 
+#include <string>
 #ifndef INCLUDE_TSTACK_H_
 #define INCLUDE_TSTACK_H_
 
@@ -9,8 +9,8 @@ class TStack {
   T* arr;
   int top;
  public:
-  Tstack() { 
-    top = -1; arr = new T[size]; 
+  Tstack() {
+    top = -1; arr = new T[size];
   }
   void push(T value) {
     if (isFull()) {
