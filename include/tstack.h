@@ -1,13 +1,14 @@
 // Copyright 2021 NNTU-CS
+#include <string> 
 #ifndef INCLUDE_TSTACK_H_
 #define INCLUDE_TSTACK_H_
 
 template<typename T, int size>
 class TStack {
-private:
+ private:
   T* arr;
   int top;
-public:
+ public:
   Tstack() { top = -1; arr = new T[size]; }
   void push(T value) {
     if (isFull()) {
