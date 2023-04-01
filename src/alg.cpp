@@ -72,8 +72,8 @@ std::string infx2pstfx(std::string inf) {
     s.Pop();
   }
   std::string end;
-  for (int i = 0; i < result.lenght(); i++) {
-    if (i < result.lenght() - 1) {
+  for (int i = 0; i < result.length(); i++) {
+    if (i < result.length() - 1) {
       end = end + result[i] + ' ';
     } else {
       end = end + result[i];
