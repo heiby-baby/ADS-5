@@ -71,12 +71,19 @@ std::string infx2pstfx(std::string inf) {
     result += s.Get();
     s.Pop();
   }
-  return result;
+  std::string end;
+  for (int i = 0; i < result.lenght(); i++) {
+    if (i < result.lenght() - 1) {
+      end = end + result[i] + ' ';
+    } else {
+      end = end + result[i];
+    }
+  return end;
 }
 
 int eval(std::string post) {
   TStack <int, 100> s;
-  for (int i = 0; i < post.length(); i++) {
+  for (int i = 0; i < post.length(); i+=2) {
     char c = post[i];
     if (Cheching_for_a_Num(c)) {
       s.push(alphabet(c));
