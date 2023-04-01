@@ -88,9 +88,9 @@ int eval(std::string post) {
     if (Cheching_for_a_Num(c)) {
       s.push(alphabet(c));
     } else {
-      int temp1 = s.Get();
-      s.Pop();
       int temp2 = s.Get();
+      s.Pop();
+      int temp1 = s.Get();
       s.Pop();
       switch (c) {
         case '+':
