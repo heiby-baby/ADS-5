@@ -78,6 +78,7 @@ std::string infx2pstfx(std::string inf) {
     } else {
       end = end + result[i];
     }
+  }
   return end;
 }
 
