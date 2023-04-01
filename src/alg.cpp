@@ -43,7 +43,7 @@ int ifOperator(char c) {
   return 0;
 }
 
-std::string infix_to_postfix(std::string inf) {
+std::string infx2pstfx(std::string inf) {
   TStack<char, 100> s;
   std::string result = "";
   for (int i = 0; i < inf.length(); i++) {
