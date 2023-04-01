@@ -74,8 +74,8 @@ std::string infix_to_postfix(std::string inf) {
   return result;
 }
 
-int eval(std::string post){
-  TStack<int, 100> s;
+int eval(std::string post) {
+  TStack <int, 100> s;
   for (int i = 0; i < post.length(); i++) {
     char c = post[i];
     if (Cheching_for_a_Num(c)) {
