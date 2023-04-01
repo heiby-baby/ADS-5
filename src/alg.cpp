@@ -44,7 +44,7 @@ int ifOperator(char c) {
 }
 
 std::string infix_to_postfix(std::string inf) {
-  TStack<char,100> s;
+  TStack<char, 100> s;
   std::string result = "";
   for (int i = 0; i < inf.length(); i++) {
     char c = inf[i];
