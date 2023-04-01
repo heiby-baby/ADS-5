@@ -4,7 +4,7 @@
 #include "tstack.h"
 
 int alphabet(char c) {
-	switch (c) {
+  switch (c) {
     case('1'): return 1;
     case('2'): return 2;
     case('3'): return 3;
@@ -16,7 +16,7 @@ int alphabet(char c) {
     case('9'): return 9;
     case('0'): return 0;
   }
-  return -1; 
+  return -1;
 }
 
 bool Cheching_for_a_Num(char a) {
@@ -26,8 +26,7 @@ bool Cheching_for_a_Num(char a) {
 int get_operator_priority(char op) {
   if (op == '+' || op == '-') {
     return 1;
-  }
-  else if (op == '*' || op == '/') {
+  } else if (op == '*' || op == '/') {
     return 2;
   } else {
     return 0;
@@ -51,19 +50,17 @@ std::string infix_to_postfix(std::string inf) {
     char c = inf[i];
     if (Cheching_for_a_Num(c)) {
       result += c;
-    }
-    else if (c == '(') {
+    } else if (c == '(') {
       s.push(c);
-    }
-    else if (c == ')') {
+    } else if (c == ')') {
       while (!s.isEmpty() && s.Get() != '(') {
         result += s.Get();
         s.Pop();
       }
       s.Pop();
-    }
-    else if (ifOperator(c)) {
-      while (!s.isEmpty() && get_operator_priority(s.Get()) >= get_operator_priority(c)) {
+    } else if (ifOperator(c)) {
+      while (!s.isEmpty() && \
+      get_operator_priority(s.Get()) >= get_operator_priority(c)) {
         result += s.Get();
         s.Pop();
       }
